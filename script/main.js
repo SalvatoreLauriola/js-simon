@@ -27,10 +27,14 @@ for(var i = 0; numeriRandom.length < 5; i++){
 
 console.log(numeriRandom);
 alert(numeriRandom);
+
+// ok
+
+
 setTimeout(function(){
 
 for(var i = 0; numeriUtente.length < 5; i++) {
-  var request = prompt('Inserisci numero');
+  var request = parseInt(prompt('Inserisci numero'));
   
   if(!numeriUtente.includes(request)){
     numeriUtente.push(request);
@@ -49,8 +53,8 @@ for(var i = 0; i < numeriRandom.length; i++ ){
   numGiusti.push(numFind);
   }
 }
-
-console.log(numGiusti);
+alert(' I numeri corretti sono: ' + numGiusti.length + ' e sono questi: '  + ' ' +  numGiusti);
+console.log();
 
 },  3000);
 
