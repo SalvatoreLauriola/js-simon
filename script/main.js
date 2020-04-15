@@ -24,35 +24,35 @@ for(var i = 0; numeriRandom.length < 5; i++){
   
   }
 }
+
 console.log(numeriRandom);
 alert(numeriRandom);
-
-var interval = setInterval(function(){
-
+setTimeout(function(){
 
 for(var i = 0; numeriUtente.length < 5; i++) {
-  var request = prompt(parseInt('Inserisci numero'));
-  numeriUtente.push(request);
-
-
-  if(request==numeriRandom.includes()){
-
+  var request = prompt('Inserisci numero');
+  
+  if(!numeriUtente.includes(request)){
+    numeriUtente.push(request);
+    
+  }else {
+    alert('Hai gia inserito questo numero');
   }
 }
 
-console.log(numeriUtente);
+var numGiusti = [];
 
-},  30000);
+for(var i = 0; i < numeriRandom.length; i++ ){
+  var numFind = numeriUtente[i];
+ if (numeriRandom.includes(numFind)){
+  
+  numGiusti.push(numFind);
+  }
+}
 
+console.log(numGiusti);
 
-
-
-
-
-
-
-
-
+},  3000);
 
 function random(min, max) {
   var randomNum = Math.floor(Math.random() * (max - min + 1) ) + min;
